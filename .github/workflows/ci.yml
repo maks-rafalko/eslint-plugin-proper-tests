@@ -1,0 +1,49 @@
+name: CI
+
+on: [pull_request]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+        platform:
+          - os: ubuntu-latest
+            shell: bash
+          - os: macos-latest
+            shell: bash
+
+    runs-on: ${{ matrix.platform.os }}
+    defaults:
+      run:
+        shell: ${{ matrix.platform.shell }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Use Nodejs ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Get npm cache
+        id: npm-cache
+        run: echo "::set-output name=dir::$(npm config get cache)"
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.npm-cache.outputs.dir }}
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-npm-
+
+      - name: Install npm packages
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Analyze
+        run: npm run analyze
