@@ -25,7 +25,7 @@
     "yarn": "Please use NPM!"
   },
   "scripts": {
-    "analyze": "npm run format && npm run lint && npm run lint:docs && npm run test",
+    "analyze": "npm run format && npm run lint && npm run lint:docs && npm run lint:eslint-docs && npm run test",
     "test": "jest --runInBand --ci --logHeapUsage --no-cache --detectOpenHandles --coverage",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
