@@ -1,0 +1,20 @@
+{
+  "extends": "@tsconfig/node16",
+  "include": [
+    "jest.config.ts",
+    "prettier.config.js",
+    "src",
+    "app.e2e-spec.ts",
+    "file.ts"
+  ],
+  "compilerOptions": {
+    "declaration": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "noUnusedLocals": true
+  },
+  "exclude": ["node_modules"]
+}

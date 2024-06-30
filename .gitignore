@@ -1,0 +1,41 @@
+# compiled output
+/lib
+/dist
+/node_modules
+
+# Customs
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+newrelic_agent.log
+
+# OS
+.DS_Store
+
+# Tests
+/coverage
+/.nyc_output
+/test/component/results/*
+.scannerwork
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.iml
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
