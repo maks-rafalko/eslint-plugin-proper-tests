@@ -50,4 +50,4 @@ jobs:
         run: npm run build
 
       - name: Analyze
-        run: npm analyze
+        run: npm run analyze
