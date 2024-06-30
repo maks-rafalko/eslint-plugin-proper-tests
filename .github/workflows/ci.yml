@@ -47,7 +47,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm build
+        run: npm run build
 
       - name: Analyze
         run: npm analyze
