@@ -9,7 +9,7 @@
 ## Installation
 
 ```bash
-npm install -D eslint-proper-tests
+npm install -D eslint-plugin-proper-tests
 ```
 
 ## Usage

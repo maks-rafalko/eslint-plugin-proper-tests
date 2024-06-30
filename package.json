@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-proper-tests",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ESLint rules for writing more proper tests.",
   "keywords": [
     "eslint",
