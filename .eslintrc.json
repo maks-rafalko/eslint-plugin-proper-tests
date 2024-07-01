@@ -147,7 +147,7 @@
     "no-unreachable": "error",
     "no-console": "error",
     "@typescript-eslint/no-unnecessary-condition": [
-      "warn"
+      "error"
     ],
     "eslint-plugin/require-meta-docs-description": "error",
     "eslint-plugin/require-meta-docs-url": "error",
