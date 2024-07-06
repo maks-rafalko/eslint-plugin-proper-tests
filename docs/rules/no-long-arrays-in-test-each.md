@@ -1,8 +1,18 @@
-# Disallow mixing expectations for different variables between each other (`proper-tests/no-long-arrays-in-test-each`)
+# Disallow using long arrays with objects inside `test.each()` or `it.each()`. Force moving them out of the file (`proper-tests/no-long-arrays-in-test-each`)
 
 💼 This rule is enabled in the ✅ `recommended` config.
 
 <!-- end auto-generated rule header -->
+
+## Options
+
+<!-- begin auto-generated rule options list -->
+
+| Name    | Type    |
+| :------ | :------ |
+| `limit` | Integer |
+
+<!-- end auto-generated rule options list -->
 
 ## Rule details
 

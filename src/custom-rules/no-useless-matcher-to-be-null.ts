@@ -2,7 +2,7 @@ import type { ParserServicesWithTypeInformation } from '@typescript-eslint/types
 import { AST_NODE_TYPES, ESLintUtils, TSESLint, TSESTree } from '@typescript-eslint/utils';
 import * as ts from 'typescript';
 
-import { isTypeFlagSet } from './utils/isTypeFlagSet';
+import { isTypeFlagSet } from './utils/is-type-flag-set';
 
 type MessageIds = 'noUselessMatchers';
 type Options = [];

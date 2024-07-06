@@ -94,6 +94,25 @@ ruleTester.run('no-mixed-expectation-groups', noMixedExpectationGroups, {
       ],
     },
     {
+      name: 'when expectations for variable1 are mixed with variable2 in one "test", with "not"',
+      code: `
+                test('should fail1', function () {
+                  expect(variable1).toBeDefined();
+                  expect(variable2).toEqual({});
+                  expect(variable1).not.toEqual({});
+                });
+                `,
+      output: null,
+      errors: [
+        {
+          messageId: 'noMixedExpectationGroups',
+          data: {
+            variable: 'variable1',
+          },
+        },
+      ],
+    },
+    {
       name: 'when expectations for objects variable1.property1 are mixed with variable2 in one "test"',
       code: `
                 test('should fail1', function () {
