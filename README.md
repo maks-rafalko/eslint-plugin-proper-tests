@@ -64,8 +64,8 @@ For `.eslintrc` configs you can use
 [overrides](https://eslint.org/docs/user-guide/configuring/configuration-files#how-do-overrides-work)
 to have ESLint apply additional rules to specific files:
 
-```json
-{
+```js
+module.exports = {
   "extends": ["eslint:recommended"],
   "overrides": [
     {
