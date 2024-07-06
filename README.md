@@ -17,26 +17,38 @@ npm install -D eslint-plugin-proper-tests
 Add `proper-tests` to the plugins section of your `.eslintrc` configuration file. You
 can omit the `eslint-plugin-` prefix:
 
-```json
-{
+```js
+module.exports = {
   "plugins": ["proper-tests"]
 }
 ```
 
 And then use the `recommended` shared configuration:
 
-```json
-{
+```js
+module.exports = {
   "extends": ["plugin:proper-tests/recommended"]
 }
 ```
 
 Or configure the rules one by one (not recommended):
 
-```json
-{
+```js
+module.exports = {
   "rules": {
     "proper-tests/no-useless-matcher-to-be-defined": "error"
+  }
+}
+```
+
+This plugin uses TypeScript to provide more accurate results. To enable this, you need to [configure ESLint to work with TypeScript](https://typescript-eslint.io/getting-started/typed-linting):
+
+```js
+module.exports = {
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": true,
+    "tsconfigRootDir": __dirname,
   }
 }
 ```
