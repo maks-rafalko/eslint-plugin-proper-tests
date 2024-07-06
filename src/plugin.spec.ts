@@ -6,6 +6,7 @@ describe('proper tests plugin', (): void => {
       'no-useless-matcher-to-be-defined',
       'no-useless-matcher-to-be-null',
       'no-mixed-expectation-groups',
+      'no-long-arrays-in-test-each',
     ]);
   });
 
