@@ -17,26 +17,38 @@ npm install -D eslint-plugin-proper-tests
 Add `proper-tests` to the plugins section of your `.eslintrc` configuration file. You
 can omit the `eslint-plugin-` prefix:
 
-```json
-{
+```js
+module.exports = {
   "plugins": ["proper-tests"]
 }
 ```
 
 And then use the `recommended` shared configuration:
 
-```json
-{
+```js
+module.exports = {
   "extends": ["plugin:proper-tests/recommended"]
 }
 ```
 
 Or configure the rules one by one (not recommended):
 
-```json
-{
+```js
+module.exports = {
   "rules": {
     "proper-tests/no-useless-matcher-to-be-defined": "error"
+  }
+}
+```
+
+This plugin uses TypeScript to provide more accurate results. To enable this, you need to [configure ESLint to work with TypeScript](https://typescript-eslint.io/getting-started/typed-linting):
+
+```js
+module.exports = {
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": true,
+    "tsconfigRootDir": __dirname,
   }
 }
 ```
@@ -91,12 +103,12 @@ To enable this configuration with `.eslintrc`, use the `extends` property:
 💼 Configurations enabled in.\
 ✅ Set in the `recommended` configuration.
 
-| Name                                                                               | Description                                                                               | 💼 |
-| :--------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- | :- |
-| [no-long-arrays-in-test-each](docs/rules/no-long-arrays-in-test-each.md)           | Disallow mixing expectations for different variables between each other.                  | ✅  |
-| [no-mixed-expectation-groups](docs/rules/no-mixed-expectation-groups.md)           | Disallow mixing expectations for different variables between each other.                  | ✅  |
-| [no-useless-matcher-to-be-defined](docs/rules/no-useless-matcher-to-be-defined.md) | Disallow using `.toBeDefined()` matcher when it is known that variable is always defined. | ✅  |
-| [no-useless-matcher-to-be-null](docs/rules/no-useless-matcher-to-be-null.md)       | Disallow using `.toBeNull()` when TypeScript types conflict with it.                      | ✅  |
+| Name                                                                               | Description                                                                                                     | 💼 |
+| :--------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------- | :- |
+| [no-long-arrays-in-test-each](docs/rules/no-long-arrays-in-test-each.md)           | Disallow using long arrays with objects inside `test.each()` or `it.each()`. Force moving them out of the file. | ✅  |
+| [no-mixed-expectation-groups](docs/rules/no-mixed-expectation-groups.md)           | Disallow mixing expectations for different variables between each other.                                        | ✅  |
+| [no-useless-matcher-to-be-defined](docs/rules/no-useless-matcher-to-be-defined.md) | Disallow using `.toBeDefined()` matcher when it is known that variable is always defined.                       | ✅  |
+| [no-useless-matcher-to-be-null](docs/rules/no-useless-matcher-to-be-null.md)       | Disallow using `.toBeNull()` when TypeScript types conflict with it.                                            | ✅  |
 
 <!-- end auto-generated rules list -->
 

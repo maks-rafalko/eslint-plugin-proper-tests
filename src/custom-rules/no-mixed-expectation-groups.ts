@@ -1,5 +1,6 @@
 import { AST_NODE_TYPES, ESLintUtils, TSESTree } from '@typescript-eslint/utils';
 
+import { getExpectCallExpression } from './utils/get-expect-call-expression';
 import { isParentATestFunction } from './utils/is-parent-a-test-function';
 
 type MessageIds = 'noMixedExpectationGroups';
@@ -24,23 +25,13 @@ export const noMixedExpectationGroups = ESLintUtils.RuleCreator.withoutDocs<Opti
       ArrowFunctionExpression: resetMatchersIfIsTestFunction,
       'ArrowFunctionExpression:exit': resetMatchersIfIsTestFunction,
       CallExpression(node) {
-        if (node.callee.type !== AST_NODE_TYPES.MemberExpression) {
+        const expectCallIdentifier = getExpectCallExpression(node);
+
+        if (expectCallIdentifier === null) {
           return;
         }
 
-        if (node.callee.property.type !== AST_NODE_TYPES.Identifier) {
-          return;
-        }
-
-        if (
-          node.callee.object.type !== AST_NODE_TYPES.CallExpression ||
-          node.callee.object.callee.type !== AST_NODE_TYPES.Identifier ||
-          node.callee.object.callee.name !== 'expect'
-        ) {
-          return;
-        }
-
-        const expectFirstArgument = node.callee.object.arguments[0];
+        const expectFirstArgument = expectCallIdentifier.arguments[0];
 
         let variableName = '';
 
