@@ -78,7 +78,7 @@ export const noMixedExpectationGroups = ESLintUtils.RuleCreator.withoutDocs<Opti
     },
     messages: {
       noMixedExpectationGroups:
-        'Expectation for variable "{{ variable }}" should be moved above to the same place where it is check for the first time. Do not mix expectations of different variables.',
+        'Expectation for variable "{{ variable }}" should be moved above to the same place where it is checked for the first time. Do not mix expectations of different variables.',
     },
     type: 'suggestion',
     schema: [],

@@ -13,5 +13,6 @@ export = {
     'no-useless-matcher-to-be-defined': noUselessMatcherToBeDefined,
     'no-useless-matcher-to-be-null': noUselessMatcherToBeNull,
     'no-mixed-expectation-groups': noMixedExpectationGroups,
+    'no-long-arrays-in-test-each': noMixedExpectationGroups,
   },
 } satisfies Linter.Plugin;

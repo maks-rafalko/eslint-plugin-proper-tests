@@ -93,6 +93,7 @@ To enable this configuration with `.eslintrc`, use the `extends` property:
 
 | Name                                                                               | Description                                                                               | 💼 |
 | :--------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- | :- |
+| [no-long-arrays-in-test-each](docs/rules/no-long-arrays-in-test-each.md)           | Disallow mixing expectations for different variables between each other.                  | ✅  |
 | [no-mixed-expectation-groups](docs/rules/no-mixed-expectation-groups.md)           | Disallow mixing expectations for different variables between each other.                  | ✅  |
 | [no-useless-matcher-to-be-defined](docs/rules/no-useless-matcher-to-be-defined.md) | Disallow using `.toBeDefined()` matcher when it is known that variable is always defined. | ✅  |
 | [no-useless-matcher-to-be-null](docs/rules/no-useless-matcher-to-be-null.md)       | Disallow using `.toBeNull()` when TypeScript types conflict with it.                      | ✅  |
