@@ -29,7 +29,7 @@
     "test": "jest --runInBand --ci --logHeapUsage --no-cache --detectOpenHandles --coverage",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
-    "lint": "eslint .",
+    "lint": "eslint . --report-unused-disable-directives",
     "lint:fix": "npm run lint -- --fix",
     "lint:docs": "markdownlint \"**/*.md\"",
     "lint:eslint-docs": "npm run update:eslint-docs -- --check",

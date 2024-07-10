@@ -8,7 +8,6 @@ const { compilerOptions } = require('./tsconfig.json');
 
 process.env.TZ = 'UTC';
 
-/* eslint-disable @typescript-eslint/naming-convention */
 const jestConfig: Config.InitialOptions = {
   moduleFileExtensions: ['js', 'ts'],
   // https://kulshekhar.github.io/ts-jest/docs/getting-started/paths-mapping/
