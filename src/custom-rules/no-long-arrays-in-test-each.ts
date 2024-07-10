@@ -62,7 +62,6 @@ export const noLongArraysInTestEach = ESLintUtils.RuleCreator.withoutDocs<Option
         'Disallow using long arrays with objects inside `test.each()` or `it.each()`. Force moving them out of the file.',
     },
     messages: {
-      // eslint-disable-next-line max-len
       noLongArrays:
         'Move the array with objects out of the test file in `{{ testFunctionName }}.each()`. Array length is {{ actualLength }}, but the limit is {{ limit }} items.',
     },
