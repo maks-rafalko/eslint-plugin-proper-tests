@@ -16,7 +16,7 @@
 
 ## Rule details
 
-This rule disallows mixing expectations for different variables between each other.
+This rule disallows the usage of long arrays in `test.each()` calls.
 
 The following code is considered errors:
 
