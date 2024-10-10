@@ -96,6 +96,8 @@ To enable this configuration with `.eslintrc`, use the `extends` property:
 }
 ```
 
+and you are done, no other configuration is needed.
+
 ## Rules
 
 <!-- begin auto-generated rules list -->

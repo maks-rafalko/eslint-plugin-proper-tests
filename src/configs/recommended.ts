@@ -1,6 +1,7 @@
 import type { ClassicConfig } from '@typescript-eslint/utils/ts-eslint';
 
 export = {
+  plugins: ['proper-tests'],
   rules: {
     'proper-tests/no-useless-matcher-to-be-defined': 'error',
     'proper-tests/no-useless-matcher-to-be-null': 'error',
