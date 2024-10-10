@@ -14,16 +14,7 @@ npm install -D eslint-plugin-proper-tests
 
 ## Usage
 
-Add `proper-tests` to the plugins section of your `.eslintrc` configuration file. You
-can omit the `eslint-plugin-` prefix:
-
-```js
-module.exports = {
-  "plugins": ["proper-tests"]
-}
-```
-
-And then use the `recommended` shared configuration:
+Use the `recommended` shared config in your `.eslintrc` configuration file:
 
 ```js
 module.exports = {
@@ -31,10 +22,22 @@ module.exports = {
 }
 ```
 
-Or configure the rules one by one (not recommended):
+and you are good to go. Run ESLint and enjoy the results.
+
+Or, alternatively, add `proper-tests` to the plugins section of your `.eslintrc` configuration file:
 
 ```js
 module.exports = {
+  "plugins": ["proper-tests"],
+  // ...  
+}
+```
+
+and configure the rules one by one:
+
+```js
+module.exports = {
+  "plugins": ["proper-tests"],
   "rules": {
     "proper-tests/no-useless-matcher-to-be-defined": "error"
   }
