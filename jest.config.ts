@@ -3,7 +3,7 @@ import { Config } from '@jest/types';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { pathsToModuleNameMapper } from 'ts-jest';
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const { compilerOptions } = require('./tsconfig.json');
 
 process.env.TZ = 'UTC';
