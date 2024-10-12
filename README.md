@@ -13,7 +13,7 @@ npm install -D eslint-plugin-proper-tests
 ```
 
 > [!NOTE]  
-> For `@typescript-eslint` v7 use version ^1.0.0 of this plugin. For `@typescript-eslint` v8 use version ^2.0.0 of this plugin. 
+> For `@typescript-eslint` v7 use version ^1.0.0 of this plugin. For `@typescript-eslint` v8 use version ^2.0.0 of this plugin.
 
 ## Usage
 
