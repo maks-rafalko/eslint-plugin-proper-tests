@@ -1,12 +1,15 @@
+import typescriptEslintParser from '@typescript-eslint/parser';
 import { RuleTester } from '@typescript-eslint/rule-tester';
 
 import { noUselessMatcherToBeDefined } from './no-useless-matcher-to-be-defined';
 
 const ruleTester = new RuleTester({
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    project: './tsconfig.json',
-    tsconfigRootDir: __dirname + '/../../',
+  languageOptions: {
+    parser: typescriptEslintParser,
+    parserOptions: {
+      project: './tsconfig.json',
+      tsconfigRootDir: __dirname + '/../../',
+    },
   },
 });
 

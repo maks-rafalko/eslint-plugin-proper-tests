@@ -1,9 +1,12 @@
+import typescriptEslintParser from '@typescript-eslint/parser';
 import { RuleTester } from '@typescript-eslint/rule-tester';
 
 import { noMixedExpectationGroups } from './no-mixed-expectation-groups';
 
 const ruleTester = new RuleTester({
-  parser: '@typescript-eslint/parser',
+  languageOptions: {
+    parser: typescriptEslintParser,
+  },
 });
 
 ruleTester.run('no-mixed-expectation-groups', noMixedExpectationGroups, {

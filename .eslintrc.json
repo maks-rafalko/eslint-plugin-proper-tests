@@ -2,7 +2,6 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "extends": [
-    "airbnb-typescript/base",
     "plugin:@typescript-eslint/recommended",
     "plugin:eslint-plugin/recommended",
     "prettier"
@@ -156,7 +155,10 @@
   "parserOptions": {
     "ecmaVersion": 2022,
     "sourceType": "module",
-    "project": "tsconfig.json"
+    "projectService": {
+      "allowDefaultProject": ["*.js"],
+      "defaultProject": "tsconfig.json"
+    }
   },
   "env": {
     "node": true,
