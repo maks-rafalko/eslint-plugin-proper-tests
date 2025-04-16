@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-proper-tests",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "ESLint rules for writing more proper tests.",
   "keywords": [
     "eslint",
@@ -34,7 +34,8 @@
     "lint:docs": "markdownlint \"**/*.md\"",
     "lint:eslint-docs": "npm run update:eslint-docs -- --check",
     "update:eslint-docs": "npm run build && eslint-doc-generator",
-    "build": "tsc --build ./tsconfig.build.json"
+    "build": "tsc --build ./tsconfig.build.json",
+    "ci:build": "npm run build"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^8.8.1",
@@ -66,7 +67,7 @@
     "dist"
   ],
   "peerDependencies": {
-    "eslint": ">= 8",
+    "eslint": "^8.0.0 || ^9.0.0",
     "typescript": "*"
   },
   "peerDependenciesMeta": {

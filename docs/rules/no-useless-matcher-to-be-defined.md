@@ -1,6 +1,6 @@
 # Disallow using `.toBeDefined()` matcher when it is known that variable is always defined (`proper-tests/no-useless-matcher-to-be-defined`)
 
-💼 This rule is enabled in the ✅ `recommended` config.
+💼 This rule is enabled in the following configs: ☑️ `flat/recommended`, ✅ `recommended`.
 
 <!-- end auto-generated rule header -->
 

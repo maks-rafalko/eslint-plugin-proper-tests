@@ -11,6 +11,6 @@ describe('proper tests plugin', (): void => {
   });
 
   test('it exposes recommended plugin', (): void => {
-    expect(Object.keys(plugin.configs)).toEqual(['recommended']);
+    expect(Object.keys(plugin.configs)).toEqual(['recommended', 'flat/recommended']);
   });
 });

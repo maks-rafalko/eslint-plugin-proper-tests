@@ -1,6 +1,6 @@
 # Disallow using `.toBeNull()` when TypeScript types conflict with it (`proper-tests/no-useless-matcher-to-be-null`)
 
-💼 This rule is enabled in the ✅ `recommended` config.
+💼 This rule is enabled in the following configs: ☑️ `flat/recommended`, ✅ `recommended`.
 
 <!-- end auto-generated rule header -->
 
