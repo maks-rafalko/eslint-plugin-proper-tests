@@ -131,10 +131,3 @@ In order to use the rules powered by TypeScript type-checking, you must be using
 The main plugin to be installed when Jest is used.
 
 <https://github.com/jest-community/eslint-plugin-jest>
-
-### eslint-plugin-jest-formatting
-
-This project aims to provide formatting rules (auto-fixable where possible) to
-ensure consistency and readability in jest test suites.
-
-<https://github.com/dangreenisrael/eslint-plugin-jest-formatting>
