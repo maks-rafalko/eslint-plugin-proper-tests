@@ -1,6 +1,6 @@
 # Disallow mixing expectations for different variables between each other (`proper-tests/no-mixed-expectation-groups`)
 
-💼 This rule is enabled in the ✅ `recommended` config.
+💼 This rule is enabled in the following configs: ☑️ `flat/recommended`, ✅ `recommended`.
 
 <!-- end auto-generated rule header -->
 

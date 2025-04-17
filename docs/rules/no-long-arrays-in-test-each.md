@@ -1,6 +1,6 @@
 # Disallow using long arrays with objects inside `test.each()` or `it.each()`. Force moving them out of the file (`proper-tests/no-long-arrays-in-test-each`)
 
-💼 This rule is enabled in the ✅ `recommended` config.
+💼 This rule is enabled in the following configs: ☑️ `flat/recommended`, ✅ `recommended`.
 
 <!-- end auto-generated rule header -->
 
