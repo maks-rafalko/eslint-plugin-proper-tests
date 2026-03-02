@@ -40,3 +40,7 @@ newrelic_agent.log
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# Stryker mutation testing
+stryker-tmp/
+reports/

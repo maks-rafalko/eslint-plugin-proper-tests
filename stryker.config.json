@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/stryker-mutator/stryker-js/master/packages/core/schema/stryker-schema.json",
+  "checkers": ["typescript"],
+  "tsconfigFile": "tsconfig.json",
+  "testRunner": "jest",
+  "jest": {
+    "projectType": "custom",
+    "enableFindRelatedTests": true
+  },
+  "mutate": [
+    "src/**/*.ts",
+    "!src/**/*.spec.ts"
+  ],
+  "disableTypeChecks": "src/**/*.ts",
+  "thresholds": {
+    "high": 100,
+    "low": 100,
+    "break": 100
+  },
+  "reporters": ["html", "clear-text", "progress"],
+  "tempDirName": "stryker-tmp"
+}
